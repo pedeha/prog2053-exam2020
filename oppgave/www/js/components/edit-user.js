@@ -49,8 +49,9 @@ class EditUser extends LitElement {
       return html``
     }
 
-    // This became a little bit more clumsy than intended, because I only saw that the data
-    // needed to be sent as a JSON, not form data, after finishing it.
+    // This became a little bit more clumsy than intended, because I thought the data should be sent as JSON, not form-data,
+    // because the server always responds with JSON.
+    // This was actually originally a <form> with action="/api/updateUser.php" and method="POST", but I don't have time to change it back now.
     return html`
       <h5>Editing ${this.user.uname}</h5>
       <div id="editForm">
